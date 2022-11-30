@@ -1,0 +1,130 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/talentsurvey",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44306
+        }
+      ],
+      "DownstreamPathTemplate": "/api/TalentSurvey"
+    },
+    {
+      "UpstreamPathTemplate": "/questions",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44306
+        }
+      ],
+      "DownstreamPathTemplate": "/api/TalentSurvey/AllQuestions"
+    },
+    {
+      "UpstreamPathTemplate": "/question/{QuestionId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44306
+        }
+      ],
+      "DownstreamPathTemplate": "/api/TalentSurvey/{QuestionId}"
+    },
+
+    //Decision making API
+    {
+      "UpstreamPathTemplate": "/decisionsurvey",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44366
+        }
+      ],
+      "DownstreamPathTemplate": "/api/DecisionMakingSurvey"
+    },
+    {
+      "UpstreamPathTemplate": "/allquestions",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44366
+        }
+      ],
+      "DownstreamPathTemplate": "/api/DecisionMakingSurvey/AllQuestions"
+    },
+    {
+      "UpstreamPathTemplate": "/getquestion/{QuestionBYId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44366
+        }
+      ],
+      "DownstreamPathTemplate": "/api/DecisionMakingSurvey/{QuestionBYId}"
+    },
+
+    //Revenue API
+    {
+      "UpstreamPathTemplate": "/talentquestions",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44304
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Question/TalentSurvey"
+    },
+    {
+      "UpstreamPathTemplate": "/decisionmakingquestions",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44304
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Question/DecisionMakingSurvey"
+    },
+
+    //Usermanagement API
+    {
+      "UpstreamPathTemplate": "/register",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44385
+        }
+      ],
+      "DownstreamPathTemplate": "/api/register"
+    },
+    {
+      "UpstreamPathTemplate": "/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44385
+        }
+      ],
+      "DownstreamPathTemplate": "/api/login"
+    }
+  ]
+}
